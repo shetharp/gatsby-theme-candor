@@ -1,0 +1,50 @@
+import { Styled, css } from "theme-ui"
+
+<p css={css({ textAlign: 'center' })}>
+<a href="https://www.gatsbyjs.org">
+<img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+</a>
+</p>
+
+# Gatsby theme Polaroid
+
+Gatsby theme that let you create pages from `.mdx` files inside the `pages` directory
+
+## Installation
+
+1. Install the theme
+
+```bash
+npm i --save @shetharp/gatsby-theme-polaroid
+# or
+yarn add @shetharp/gatsby-theme-polaroid
+```
+
+2. Add the theme to yout `gatsby-config.js` files
+
+```bash
+# gatsby-config.js
+
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    `@shetharp/gatsby-theme-polaroid`
+  ]
+}
+```
+
+3. Create `.mdx` files on your `src/pages` folder and you are all set.
+
+```
+// pages/index.mdx
+
+# Hello MDX page
+
+```
+
+## This theme includes:
+
+- `gatsby-plugin-mdx`: to transform `.mdx` files to pages. [docs](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/)
+- `gatsby-plugin-prismjs`: to style codeblocks properly. [docs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
+- `gatsby-plugin-theme-ui`: base & extensable styles for theme components. [docs](https://theme-ui.com/gatsby-plugin/)
