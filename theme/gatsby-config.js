@@ -1,6 +1,6 @@
 function GatsbyConfig(options) {
   // const { contentPath = "pages" } = options
-  const { syntaxHighlight = true } = options
+  const { syntaxHighlight = true } = options;
   return {
     plugins: [
       {
@@ -9,14 +9,14 @@ function GatsbyConfig(options) {
           extensions: [".mdx", ".md"],
           remarkPlugins: [require("remark-slug"), require("remark-emoji")],
           defaultLayouts: {
-            default: require.resolve("./src/components/Layout"),
+            default: require.resolve("./src/components/Layout.tsx"),
           },
           gatsbyRemarkPlugins: [syntaxHighlight && `gatsby-remark-prismjs`].filter(Boolean),
         },
       },
       "gatsby-plugin-theme-ui",
     ],
-  }
+  };
 }
 
-module.exports = GatsbyConfig
+module.exports = GatsbyConfig;

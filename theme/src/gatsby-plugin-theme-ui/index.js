@@ -1,14 +1,15 @@
-import { base } from "@theme-ui/presets"
-import merge from "lodash.merge"
+import { base } from "@theme-ui/presets";
+import merge from "lodash.merge";
 
 export default merge({}, base, {
   colors: {
-    smoke: '#f6f6f6'
+    smoke: "#f6f6f6",
   },
   fonts: {
     default:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-  },fontSizes: [16, 18, 20, 22, 27, 36],
+  },
+  fontSizes: [16, 18, 20, 22, 27, 36],
   lineHeights: {
     text: "1.45",
     heading: "1.1",
@@ -67,10 +68,10 @@ export default merge({}, base, {
     },
     ol: {
       padding: 0,
-      paddingLeft: 3
+      paddingLeft: 3,
     },
     li: {
       padding: 0,
-    }
+    },
   },
-})
+});

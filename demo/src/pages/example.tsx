@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { PageProps } from "gatsby";
 
-export default function TypescriptExample(props: PageProps) {
+export const TypescriptExamplePage: React.FC<PageProps> = (props) => {
   return (
     <>
       <h1>Path:</h1>
@@ -9,4 +10,9 @@ export default function TypescriptExample(props: PageProps) {
       <pre>{props.path}</pre>
     </>
   );
-}
+};
+export default TypescriptExamplePage;
+
+TypescriptExamplePage.propTypes = {
+  path: PropTypes.string.isRequired,
+};

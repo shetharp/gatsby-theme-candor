@@ -1,2 +1,2 @@
 // TODO: how to config this from the theme?
-require("prismjs/themes/prism-tomorrow.css")
+require("prismjs/themes/prism-tomorrow.css");
