@@ -3,5 +3,11 @@
   "workspaces": [
     "theme",
     "demo"
-  ]
+  ],
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
 }
