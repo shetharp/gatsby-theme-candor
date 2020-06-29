@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, Global } from "@emotion/core";
-import { Layout as StyledLayout, Header, Main, Container } from "theme-ui";
+import { Container } from "theme-ui";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Layout: React.FC = ({ children }) => {
@@ -16,7 +16,7 @@ const Layout: React.FC = ({ children }) => {
   `);
 
   return (
-    <StyledLayout>
+    <>
       <Global
         styles={css`
           body {
@@ -24,13 +24,13 @@ const Layout: React.FC = ({ children }) => {
           }
         `}
       />
-      <Header>
+      <header>
         <span>{data.site.siteMetadata.title}</span>
-      </Header>
-      <Main>
+      </header>
+      <main>
         <Container>{children}</Container>
-      </Main>
-    </StyledLayout>
+      </main>
+    </>
   );
 };
 export default Layout;
