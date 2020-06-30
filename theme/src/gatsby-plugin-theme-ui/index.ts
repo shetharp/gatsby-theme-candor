@@ -1,0 +1,378 @@
+import { Theme } from "theme-ui";
+import { SystemStyleObject } from "@styled-system/css";
+
+// ==================================================
+// Theme type
+// ==================================================
+export type ThemePolaroid = Theme & {
+  styles: Theme["styles"] & { del: SystemStyleObject };
+  opacities: { [k: string]: string };
+  transitions: { [k: string]: string };
+};
+
+// ==================================================
+// Theme scale > Breakpoints
+// ==================================================
+const breakpointsDict = {
+  mobileS: "320px", // breakpoints[0]
+  mobileM: "480px",
+  mobileL: "640px", // breakpoints[2]
+  tabletS: "800px",
+  tabletM: "960px", // breakpoints[4]
+  tabletL: "1120px",
+  laptopS: "1280px", // breakpoints[6]
+  laptopM: "1440px",
+  laptopL: "1600px", // breakpoints[8]
+};
+
+const breakpoints: ThemePolaroid["breakpoints"] = Object.values(breakpointsDict);
+
+// ==================================================
+// Theme scale > Colors
+// ==================================================
+const palette = {
+  grayDark: ["#000000", "#333333", "#777777"],
+  grayLight: ["#ffffff", "#F8F8F8", "#eeeeee"],
+  grayDarkAlpha: "rgba(0, 0, 0, 0.8)",
+  grayLightAlpha: "rgba(255, 255, 255, 0.8)",
+  blue: "#1a66ff",
+  blueLight: "#cce6ff",
+  magenta: "#cc4fcc",
+  magentaLight: "#ecd2f9",
+  lavendar: "#a8b4f0",
+};
+
+const colors: ThemePolaroid["colors"] = {
+  ...palette,
+  text: palette.grayDark[1],
+  background: palette.grayLight[0],
+  primary: palette.blue,
+  secondary: palette.magenta,
+  accent: palette.blueLight,
+  highlight: palette.magentaLight,
+  muted: palette.lavendar,
+};
+
+// ==================================================
+// Theme scale > Typography
+// ==================================================
+const fonts: ThemePolaroid["fonts"] = {
+  body:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  heading: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+};
+
+const fontSizes: ThemePolaroid["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
+
+const fontWeights: ThemePolaroid["fontWeights"] = {
+  body: 300,
+  heading: 700,
+  bold: 500,
+};
+
+const letterSpacings: ThemePolaroid["letterSpacings"] = {};
+
+const lineHeights: ThemePolaroid["lineHeights"] = {
+  body: 1.667,
+  heading: 1.125,
+};
+
+// ==================================================
+// Theme scale > Space
+// ==================================================
+const spaceDict = {
+  "0": "0px", // space[0]
+  "8": "8px",
+  "16": "16px", // space[2]
+  "24": "24px",
+  "32": "32px", // space[4]
+  "40": "40px",
+  "48": "48px", // space[6]
+  "64": "64px",
+  "80": "80px", // space[8]
+  "96": "96px",
+  "128": "128px", // space[10]
+  "256": "256px",
+};
+
+const space: ThemePolaroid["space"] = Object.values(spaceDict);
+
+const sizes: ThemePolaroid["sizes"] = {
+  ...spaceDict,
+  ...breakpointsDict,
+  full: "100%",
+  screenHeight: "100vh",
+  screenWidth: "100vw",
+};
+
+const zIndices: ThemePolaroid["zIndices"] = {};
+
+// ==================================================
+// Theme scale > Borders
+// ==================================================
+const borders: ThemePolaroid["borders"] = {};
+
+const borderWidths: ThemePolaroid["borderWidths"] = {
+  "0": "0",
+  none: "0",
+  sm: "2px",
+  md: "4px",
+  lg: "8px",
+};
+
+const borderStyles: ThemePolaroid["borderStyles"] = {};
+
+const radii: ThemePolaroid["radii"] = {
+  "0": "0",
+  none: "0",
+  default: "4px",
+  full: "100%",
+};
+
+// ==================================================
+// Theme scale > Opacities + Shadows
+// ==================================================
+const opacities: ThemePolaroid["opacities"] = {
+  "0": "0",
+  none: "0",
+  low: "0.2",
+  half: "0.5",
+  high: "0.8",
+  full: "1",
+};
+
+const shadows: ThemePolaroid["shadows"] = {};
+
+// ==================================================
+// Transitions
+// ==================================================
+const transitions: ThemePolaroid["transitions"] = {
+  default: "all 200ms ease",
+  fast: "all 100ms ease",
+};
+
+// ==================================================
+// Theme base style helpers
+// ==================================================
+const baseTextBlock = {
+  marginY: 2,
+};
+const baseIndentBlock = {
+  padding: 0,
+  paddingLeft: 6,
+};
+
+const baseHeading = {
+  color: "text",
+  fontFamily: "heading",
+  lineHeight: "heading",
+  fontWeight: "heading",
+  ...baseTextBlock,
+  marginTop: 6,
+  a: {
+    color: "inherit",
+    textDecoration: "none",
+    "&:hover": { textDecoration: "underline", color: "primary" },
+  },
+};
+
+// ==================================================
+// Theme styles
+// ==================================================
+const styles: ThemePolaroid["styles"] = {
+  root: {
+    fontSize: [0, null, 1, null, 2],
+    fontFamily: "body",
+    lineHeight: "body",
+    fontWeight: "body",
+  },
+  p: { ...baseTextBlock },
+  a: { color: "primary" },
+  h1: { ...baseHeading, fontSize: [5, null, 6, null, 7] },
+  h2: { ...baseHeading, fontSize: [4, null, 5, null, 6] },
+  h3: { ...baseHeading, fontSize: [3, null, 4, null, 5] },
+  h4: { ...baseHeading, fontSize: [2, null, 3, null, 4] },
+  h5: { ...baseHeading, fontSize: [1, null, 2, null, 3] },
+  h6: { ...baseHeading, fontSize: [0, null, 1, null, 2] },
+  img: {},
+  pre: {
+    ...baseTextBlock,
+    color: "primary",
+    backgroundColor: "accent",
+    maxWidth: "full",
+    overflow: "scroll",
+    padding: 2,
+  },
+  code: { fontFamily: "monospace", color: "secondary" },
+  ol: { ...baseTextBlock, ...baseIndentBlock },
+  ul: { ...baseTextBlock, ...baseIndentBlock },
+  li: { marginY: borderWidths.md, paddingLeft: 1 },
+  blockquote: {
+    ...baseTextBlock,
+    marginX: 4,
+    paddingX: 2,
+    border: "none",
+    borderLeftWidth: "lg",
+    borderLeftStyle: "solid",
+    borderLeftColor: "muted",
+  },
+  hr: {
+    ...baseTextBlock,
+    border: "none",
+    height: borderWidths.sm,
+    backgroundColor: "muted",
+  },
+  em: {},
+  strong: { fontWeight: "bold" },
+  del: { color: "muted" },
+  delete: { color: "muted" },
+  b: { fontWeight: "bold" },
+  i: {},
+  table: {
+    width: "100%",
+    borderCollapse: "separate",
+    borderSpacing: 0,
+  },
+  tr: {},
+  th: {
+    textAlign: "left",
+    padding: borderWidths.md,
+    border: "none",
+    backgroundColor: "muted",
+    color: "background",
+  },
+  td: {
+    textAlign: "left",
+    padding: borderWidths.md,
+    borderWidth: "sm",
+    borderBottomStyle: "solid",
+    borderColor: "muted",
+  },
+  div: {},
+  inlineCode: {},
+  thematicBreak: {},
+};
+
+// ==================================================
+// Theme component variants
+// ==================================================
+const layout: ThemePolaroid["layout"] = {
+  container: {
+    borderWidth: "md",
+    borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
+    borderColor: ["primary", "accent", null, null, "highlight", null, null, "muted"],
+    width: [`calc(100% - ${space[2]})`, null, null, null, `calc(100% - ${space[3]})`],
+    maxWidth: "tabletS",
+  },
+};
+
+const baseButton = {
+  cursor: "pointer",
+  borderRadius: "default",
+  paddingX: 4,
+  paddingY: 2,
+  transition: transitions.fast,
+  "&:active": {
+    opacity: opacities.high,
+    transform: "scale(0.95)",
+  },
+};
+
+const buttons: ThemePolaroid["buttons"] = {
+  primary: {
+    ...baseButton,
+    backgroundColor: "primary",
+  },
+  secondary: {
+    ...baseButton,
+    backgroundColor: "secondary",
+  },
+};
+
+const text: ThemePolaroid["text"] = {
+  default: {},
+  mono: { fontFamily: "monospace" },
+  heading: {
+    ...baseHeading,
+    fontSize: [4, null, 5, null, 6],
+    color: "primary",
+  },
+  subheading: {
+    ...baseHeading,
+    marginTop: 0,
+    fontSize: [2, null, 3, null, 4],
+    color: "muted",
+  },
+};
+
+const cards: ThemePolaroid["cards"] = {
+  primary: {
+    borderWidth: "sm",
+    borderStyle: "solid",
+    borderColor: "grayLight.2",
+    borderRadius: "default",
+    padding: 1,
+  },
+};
+
+const forms: ThemePolaroid["forms"] = {};
+
+const badges: ThemePolaroid["badges"] = {};
+
+const alerts: ThemePolaroid["alerts"] = {
+  primary: {
+    backgroundColor: "primary",
+    color: "white",
+  },
+  secondary: {
+    backgroundColor: "secondary",
+    color: "white",
+  },
+  accent: {
+    backgroundColor: "accent",
+    color: "primary",
+  },
+  highlight: {
+    backgroundColor: "highlight",
+    color: "secondary",
+  },
+};
+
+const messages: ThemePolaroid["messages"] = {};
+
+// ==================================================
+// THEME OBJECT
+// Polaroid theme
+// https://theme-ui.com/theme-spec
+// ==================================================
+const theme: ThemePolaroid = {
+  initialColorModeName: "light",
+  breakpoints,
+  borders,
+  borderStyles,
+  borderWidths,
+  colors,
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+  radii,
+  shadows,
+  sizes,
+  space,
+  zIndices,
+  styles,
+  transitions,
+  opacities,
+  layout,
+  buttons,
+  text,
+  cards,
+  forms,
+  badges,
+  alerts,
+  messages,
+};
+export default theme;

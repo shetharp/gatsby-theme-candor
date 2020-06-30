@@ -12,6 +12,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true
   },
-  "include": ["./demo/src/", "./theme/src/"],
+  "include": ["./demo/src/", "./theme/src/", "./types.d.ts"],
   "exclude": ["node_modules", "demo/node_modules", "theme/node_modules"]
 }
