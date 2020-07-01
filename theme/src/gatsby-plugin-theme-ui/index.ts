@@ -251,7 +251,12 @@ const styles: ThemePolaroid["styles"] = {
   },
   div: {},
   inlineCode: {},
-  thematicBreak: {},
+  thematicBreak: {
+    ...baseTextBlock,
+    border: "none",
+    height: borderWidths.sm,
+    backgroundColor: "muted",
+  },
 };
 
 // ==================================================
@@ -291,8 +296,8 @@ const buttons: ThemePolaroid["buttons"] = {
 };
 
 const text: ThemePolaroid["text"] = {
-  default: {},
-  mono: { fontFamily: "monospace" },
+  default: { display: "inline" },
+  mono: { display: "inline", fontFamily: "monospace" },
   heading: {
     ...baseHeading,
     fontSize: [4, null, 5, null, 6],
@@ -318,7 +323,14 @@ const cards: ThemePolaroid["cards"] = {
 
 const forms: ThemePolaroid["forms"] = {};
 
-const badges: ThemePolaroid["badges"] = {};
+const badges: ThemePolaroid["badges"] = {
+  primary: {
+    backgroundColor: "primary",
+  },
+  secondary: {
+    backgroundColor: "secondary",
+  },
+};
 
 const alerts: ThemePolaroid["alerts"] = {
   primary: {

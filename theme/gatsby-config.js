@@ -9,7 +9,7 @@ function GatsbyConfig(options) {
           extensions: [".mdx", ".md"],
           remarkPlugins: [require("remark-slug"), require("remark-emoji")],
           defaultLayouts: {
-            default: require.resolve("./src/components/Layout.tsx"),
+            default: require.resolve("./src/templates/Page.tsx"),
           },
           gatsbyRemarkPlugins: [syntaxHighlight && `gatsby-remark-prismjs`].filter(Boolean),
         },
