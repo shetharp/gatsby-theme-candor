@@ -1,8 +1,9 @@
 import theme from "../gatsby-plugin-theme-ui";
-const themeJSONString = JSON.stringify(theme);
+import { Text } from "theme-ui";
+const themeJSONString = JSON.stringify(theme, null, 2);
 
 # Theme JSON
 
 The theme JSON is below:
 
-<code>{themeJSONString}</code>
+<pre>{themeJSONString}</pre>
