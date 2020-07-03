@@ -11,7 +11,15 @@ function GatsbyConfig(options) {
           defaultLayouts: {
             default: require.resolve("./src/templates/Page.tsx"),
           },
-          gatsbyRemarkPlugins: [syntaxHighlight && `gatsby-remark-prismjs`].filter(Boolean),
+          gatsbyRemarkPlugins: [
+            {
+              resolve: "gatsby-remark-images",
+              options: {
+                maxWidth: 800,
+              },
+            },
+            syntaxHighlight && "gatsby-remark-prismjs",
+          ].filter(Boolean),
         },
       },
       "gatsby-plugin-theme-ui",
@@ -36,6 +44,8 @@ function GatsbyConfig(options) {
           path: `${__dirname}/src/images`,
         },
       },
+      "gatsby-plugin-sharp",
+      "gatsby-transformer-sharp",
     ],
   };
 }
