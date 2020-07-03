@@ -1,12 +1,21 @@
-// TODO: maybe later...
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require("path");
+const fs = require("fs");
+const mkdirp = require("mkdirp");
 
-// const fs = require('fs')
+exports.onPreBootstrap = ({ store, reporter }) => {
+  const { program } = store.getState();
 
-// exports.onPreBootstrap = function onPreBootstrap({ reporter }) {
-//   const contentPath = 'pages';
+  const dirs = [
+    path.join(program.directory, "src/pages"),
+    path.join(program.directory, "src/posts"),
+    path.join(program.directory, "src/images"),
+  ];
 
-//   if (!fs.existsSync(contentPath)) {
-//     reporter.info(`THEME-MDX ==> creating the ${contentPath} directory`)
-//     fs.mkdirSync(contentPath)
-//   }
-// }
+  dirs.forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+      reporter.log(`creating the ${dir} directory`);
+      mkdirp.sync(dir);
+    }
+  });
+};
