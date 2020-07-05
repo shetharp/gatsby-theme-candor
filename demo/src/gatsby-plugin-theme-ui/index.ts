@@ -1,7 +1,7 @@
-import { themePolaroid } from "@shetharp/gatsby-theme-polaroid";
+import { themeCandor } from "@shetharp/gatsby-theme-candor";
 
 export const themeSite = {
-  ...themePolaroid,
+  ...themeCandor,
 
   // ==================================================
   // This site's theme overrides

@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^2.13.1",
-    "@shetharp/gatsby-theme-polaroid": "*",
+    "@shetharp/gatsby-theme-candor": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

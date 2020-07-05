@@ -4,7 +4,7 @@ import { SystemStyleObject } from "@styled-system/css";
 // ==================================================
 // Theme type
 // ==================================================
-export type ThemePolaroid = Theme & {
+export type ThemeCandor = Theme & {
   styles: Theme["styles"] & { del: SystemStyleObject };
   opacities: { [k: string]: string };
   transitions: { [k: string]: string };
@@ -25,7 +25,7 @@ const breakpointsDict = {
   laptopL: "1600px", // breakpoints[8]
 };
 
-const breakpoints: ThemePolaroid["breakpoints"] = Object.values(breakpointsDict);
+const breakpoints: ThemeCandor["breakpoints"] = Object.values(breakpointsDict);
 
 // ==================================================
 // Theme scale > Colors
@@ -42,7 +42,7 @@ const palette = {
   lavendar: "#a8b4f0",
 };
 
-const colors: ThemePolaroid["colors"] = {
+const colors: ThemeCandor["colors"] = {
   ...palette,
   text: palette.grayDark[1],
   background: palette.grayLight[0],
@@ -56,24 +56,24 @@ const colors: ThemePolaroid["colors"] = {
 // ==================================================
 // Theme scale > Typography
 // ==================================================
-const fonts: ThemePolaroid["fonts"] = {
+const fonts: ThemeCandor["fonts"] = {
   body:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   heading: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   monospace: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
 };
 
-const fontSizes: ThemePolaroid["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
+const fontSizes: ThemeCandor["fontSizes"] = [16, 18, 20, 24, 28, 32, 40, 48, 60, 72];
 
-const fontWeights: ThemePolaroid["fontWeights"] = {
+const fontWeights: ThemeCandor["fontWeights"] = {
   body: 300,
   heading: 700,
   bold: 500,
 };
 
-const letterSpacings: ThemePolaroid["letterSpacings"] = {};
+const letterSpacings: ThemeCandor["letterSpacings"] = {};
 
-const lineHeights: ThemePolaroid["lineHeights"] = {
+const lineHeights: ThemeCandor["lineHeights"] = {
   body: 1.667,
   heading: 1.125,
 };
@@ -96,9 +96,9 @@ const spaceDict = {
   "256": "256px",
 };
 
-const space: ThemePolaroid["space"] = Object.values(spaceDict);
+const space: ThemeCandor["space"] = Object.values(spaceDict);
 
-const sizes: ThemePolaroid["sizes"] = {
+const sizes: ThemeCandor["sizes"] = {
   ...spaceDict,
   ...breakpointsDict,
   full: "100%",
@@ -106,14 +106,14 @@ const sizes: ThemePolaroid["sizes"] = {
   screenWidth: "100vw",
 };
 
-const zIndices: ThemePolaroid["zIndices"] = {};
+const zIndices: ThemeCandor["zIndices"] = {};
 
 // ==================================================
 // Theme scale > Borders
 // ==================================================
-const borders: ThemePolaroid["borders"] = {};
+const borders: ThemeCandor["borders"] = {};
 
-const borderWidths: ThemePolaroid["borderWidths"] = {
+const borderWidths: ThemeCandor["borderWidths"] = {
   "0": "0",
   none: "0",
   sm: "2px",
@@ -121,9 +121,9 @@ const borderWidths: ThemePolaroid["borderWidths"] = {
   lg: "8px",
 };
 
-const borderStyles: ThemePolaroid["borderStyles"] = {};
+const borderStyles: ThemeCandor["borderStyles"] = {};
 
-const radii: ThemePolaroid["radii"] = {
+const radii: ThemeCandor["radii"] = {
   "0": "0",
   none: "0",
   default: "4px",
@@ -133,7 +133,7 @@ const radii: ThemePolaroid["radii"] = {
 // ==================================================
 // Theme scale > Opacities + Shadows
 // ==================================================
-const opacities: ThemePolaroid["opacities"] = {
+const opacities: ThemeCandor["opacities"] = {
   "0": "0",
   none: "0",
   low: "0.2",
@@ -142,12 +142,12 @@ const opacities: ThemePolaroid["opacities"] = {
   full: "1",
 };
 
-const shadows: ThemePolaroid["shadows"] = {};
+const shadows: ThemeCandor["shadows"] = {};
 
 // ==================================================
 // Transitions
 // ==================================================
-const transitions: ThemePolaroid["transitions"] = {
+const transitions: ThemeCandor["transitions"] = {
   default: "all 200ms ease",
   fast: "all 100ms ease",
 };
@@ -180,7 +180,7 @@ const baseHeading = {
 // ==================================================
 // Theme styles
 // ==================================================
-const styles: ThemePolaroid["styles"] = {
+const styles: ThemeCandor["styles"] = {
   root: {
     fontSize: [0, null, 1, null, 2],
     fontFamily: "body",
@@ -262,7 +262,7 @@ const styles: ThemePolaroid["styles"] = {
 // ==================================================
 // Theme component variants
 // ==================================================
-const layout: ThemePolaroid["layout"] = {
+const layout: ThemeCandor["layout"] = {
   container: {
     borderWidth: "md",
     borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
@@ -284,7 +284,7 @@ const baseButton = {
   },
 };
 
-const buttons: ThemePolaroid["buttons"] = {
+const buttons: ThemeCandor["buttons"] = {
   primary: {
     ...baseButton,
     backgroundColor: "primary",
@@ -295,7 +295,7 @@ const buttons: ThemePolaroid["buttons"] = {
   },
 };
 
-const text: ThemePolaroid["text"] = {
+const text: ThemeCandor["text"] = {
   default: { display: "inline" },
   mono: { display: "inline", fontFamily: "monospace" },
   heading: {
@@ -311,7 +311,7 @@ const text: ThemePolaroid["text"] = {
   },
 };
 
-const cards: ThemePolaroid["cards"] = {
+const cards: ThemeCandor["cards"] = {
   primary: {
     borderWidth: "sm",
     borderStyle: "solid",
@@ -321,9 +321,9 @@ const cards: ThemePolaroid["cards"] = {
   },
 };
 
-const forms: ThemePolaroid["forms"] = {};
+const forms: ThemeCandor["forms"] = {};
 
-const badges: ThemePolaroid["badges"] = {
+const badges: ThemeCandor["badges"] = {
   primary: {
     backgroundColor: "primary",
   },
@@ -335,7 +335,7 @@ const badges: ThemePolaroid["badges"] = {
   },
 };
 
-const alerts: ThemePolaroid["alerts"] = {
+const alerts: ThemeCandor["alerts"] = {
   primary: {
     backgroundColor: "primary",
     color: "white",
@@ -354,14 +354,14 @@ const alerts: ThemePolaroid["alerts"] = {
   },
 };
 
-const messages: ThemePolaroid["messages"] = {};
+const messages: ThemeCandor["messages"] = {};
 
 // ==================================================
 // THEME OBJECT
-// Polaroid theme
+// Candor theme
 // https://theme-ui.com/theme-spec
 // ==================================================
-export const themePolaroid: ThemePolaroid = {
+export const themeCandor: ThemeCandor = {
   initialColorModeName: "light",
   breakpoints,
   borders,
@@ -390,4 +390,4 @@ export const themePolaroid: ThemePolaroid = {
   alerts,
   messages,
 };
-export default themePolaroid;
+export default themeCandor;

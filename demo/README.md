@@ -1,1 +1,1 @@
-# gatsby-theme-polaroid demo
+# gatsby-theme-candor demo

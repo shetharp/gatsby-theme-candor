@@ -1,9 +1,9 @@
 {
-  "name": "@shetharp/gatsby-theme-polaroid",
+  "name": "@shetharp/gatsby-theme-candor",
   "author": "Arpit Sheth <arpit@arpitsheth.com> (@shetharp)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shetharp/gatsby-theme-polaroid.git"
+    "url": "https://github.com/shetharp/gatsby-theme-candor.git"
   },
   "version": "0.1.0",
   "main": "index.js",
