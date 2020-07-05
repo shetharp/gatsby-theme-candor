@@ -1,8 +1,31 @@
+/**
+ * Plugin `gatsby-source-filesystem` will automatically source files from "src/pages"
+ * Plugin `gatsby-plugin-page-creator` will automatically create pages from files in "src/pages"
+ */
 function GatsbyConfig(options) {
-  // const { contentPath = "pages" } = options
   const { syntaxHighlight = true } = options;
   return {
     plugins: [
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          name: "posts",
+          path: "src/posts",
+        },
+      },
+      {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          name: "images",
+          path: "src/images",
+        },
+      },
+      {
+        resolve: "gatsby-plugin-page-creator",
+        options: {
+          path: "src/posts",
+        },
+      },
       {
         resolve: "gatsby-plugin-mdx",
         options: {
@@ -10,6 +33,7 @@ function GatsbyConfig(options) {
           remarkPlugins: [require("remark-slug"), require("remark-emoji")],
           defaultLayouts: {
             default: require.resolve("./src/templates/Page.tsx"),
+            posts: require.resolve("./src/templates/Post.tsx"),
           },
           gatsbyRemarkPlugins: [
             {
@@ -23,31 +47,9 @@ function GatsbyConfig(options) {
         },
       },
       "gatsby-plugin-theme-ui",
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          name: "pages",
-          path: `src/pages`,
-        },
-      },
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          name: "posts",
-          path: `src/posts`,
-        },
-      },
-      {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          name: "images",
-          path: `src/images`,
-        },
-      },
       "gatsby-plugin-sharp",
       "gatsby-transformer-sharp",
     ],
   };
 }
-
 module.exports = GatsbyConfig;
