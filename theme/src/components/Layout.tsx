@@ -2,19 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css, Global } from "@emotion/core";
 import { Container } from "theme-ui";
-import { graphql, useStaticQuery } from "gatsby";
+import Header from "./Header";
+import Main from "./Main";
+import Content from "./Content";
 
-const Layout: React.FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+export type LayoutProps = {
+  // empty
+};
 
+const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
       <Global
@@ -24,12 +20,12 @@ const Layout: React.FC = ({ children }) => {
           }
         `}
       />
-      <header>
-        <span>{data.site.siteMetadata.title}</span>
-      </header>
-      <main>
-        <Container>{children}</Container>
-      </main>
+      <Header />
+      <Main>
+        <Container>
+          <Content>{props.children}</Content>
+        </Container>
+      </Main>
     </>
   );
 };
