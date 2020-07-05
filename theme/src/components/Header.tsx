@@ -7,7 +7,7 @@ export type HeaderProps = {
   // empty
 };
 
-const Header: React.FC<HeaderProps> = (props) => {
+export const Header: React.FC<HeaderProps> = (props) => {
   const data = useStaticQuery(graphql`
     query {
       site {

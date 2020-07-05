@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 import Layout from "../components/Layout";
 import { Badge, Text } from "theme-ui";
 
-const Page: React.FC = ({ children }) => {
+export type PageTemplateProps = {
+  // empty
+};
+
+const Page: React.FC<PageTemplateProps> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {

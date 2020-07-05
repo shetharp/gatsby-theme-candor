@@ -10,7 +10,7 @@ export type LayoutProps = {
   // empty
 };
 
-const Layout: React.FC<LayoutProps> = (props) => {
+export const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
       <Global

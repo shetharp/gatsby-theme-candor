@@ -361,7 +361,7 @@ const messages: ThemePolaroid["messages"] = {};
 // Polaroid theme
 // https://theme-ui.com/theme-spec
 // ==================================================
-const theme: ThemePolaroid = {
+export const themePolaroid: ThemePolaroid = {
   initialColorModeName: "light",
   breakpoints,
   borders,
@@ -390,4 +390,4 @@ const theme: ThemePolaroid = {
   alerts,
   messages,
 };
-export default theme;
+export default themePolaroid;

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import { Badge, Text } from "theme-ui";
 
-type PostProps = PageProps & {
+export type PostProps = PageProps & {
   pageContext: {
     frontmatter: { [k: string]: string };
   };

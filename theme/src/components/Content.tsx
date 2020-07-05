@@ -6,7 +6,7 @@ export type ContentProps = {
   // empty
 };
 
-const Content: React.FC<ContentProps> = (props) => {
+export const Content: React.FC<ContentProps> = (props) => {
   return <Box paddingY="5">{props.children}</Box>;
 };
 export default Content;

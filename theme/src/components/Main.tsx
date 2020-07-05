@@ -5,7 +5,7 @@ export type MainProps = {
   // empty
 };
 
-const Main: React.FC<MainProps> = (props) => {
+export const Main: React.FC<MainProps> = (props) => {
   return <main>{props.children}</main>;
 };
 export default Main;

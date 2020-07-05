@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PageProps } from "gatsby";
-import Layout from "@shetharp/gatsby-theme-polaroid/src/components/Layout";
+import { Layout } from "@shetharp/gatsby-theme-polaroid";
 
 const TypescriptExamplePage: React.FC<PageProps> = (props) => {
   return (

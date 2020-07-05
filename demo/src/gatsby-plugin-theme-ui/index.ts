@@ -1,6 +1,6 @@
-import themePolaroid from "@shetharp/gatsby-theme-polaroid/src/gatsby-plugin-theme-ui";
+import { themePolaroid } from "@shetharp/gatsby-theme-polaroid";
 
-export default {
+export const themeSite = {
   ...themePolaroid,
 
   // ==================================================
@@ -9,3 +9,4 @@ export default {
   // ==================================================
   // TODO
 };
+export default themeSite;
