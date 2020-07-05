@@ -31,26 +31,32 @@ const breakpoints: ThemeCandor["breakpoints"] = Object.values(breakpointsDict);
 // Theme scale > Colors
 // ==================================================
 const palette = {
-  grayDark: ["#000000", "#333333", "#777777"],
-  grayLight: ["#ffffff", "#F8F8F8", "#eeeeee"],
-  grayDarkAlpha: "rgba(0, 0, 0, 0.8)",
-  grayLightAlpha: "rgba(255, 255, 255, 0.8)",
-  blue: "#1a66ff",
-  blueLight: "#cce6ff",
-  magenta: "#cc4fcc",
-  magentaLight: "#ecd2f9",
-  lavendar: "#a8b4f0",
+  white: "#FFFFFF",
+  fairWhite: "#F2F2F2",
+  genuineSilver: "#828291",
+  reliableGray: "#424150",
+  impartialGray: "#2A2A36",
+  black: "#000000",
+  neutral: ["#FFFFFF", "#F2F2F2", "#828291", "#424150", "#2A2A36", "#000000"],
+  candidOrange: "#F18F01",
+  directRed: "#ED254E",
+  virtuousViolet: "#B721FF",
+  unyieldingYellow: "#F8E71C",
+  crispEucalyptus: "#40F99B",
+  clearBlue: "#21D4FD",
+  equitableBlue: "#3F89FF",
+  properBlue: "#102341",
 };
 
 const colors: ThemeCandor["colors"] = {
   ...palette,
-  text: palette.grayDark[1],
-  background: palette.grayLight[0],
-  primary: palette.blue,
-  secondary: palette.magenta,
-  accent: palette.blueLight,
-  highlight: palette.magentaLight,
-  muted: palette.lavendar,
+  text: palette.neutral[4],
+  background: palette.neutral[0],
+  primary: palette.candidOrange,
+  secondary: palette.clearBlue,
+  accent: palette.crispEucalyptus,
+  highlight: palette.equitableBlue,
+  muted: palette.genuineSilver,
 };
 
 // ==================================================
@@ -198,8 +204,8 @@ const styles: ThemeCandor["styles"] = {
   img: {},
   pre: {
     ...baseTextBlock,
-    color: "primary",
-    backgroundColor: "accent",
+    color: "neutral.3",
+    backgroundColor: "neutral.1",
     maxWidth: "full",
     overflow: "scroll",
     padding: 2,
@@ -264,9 +270,9 @@ const styles: ThemeCandor["styles"] = {
 // ==================================================
 const layout: ThemeCandor["layout"] = {
   container: {
-    borderWidth: "md",
-    borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
-    borderColor: ["primary", "accent", null, null, "highlight", null, null, "muted"],
+    // borderWidth: "md",
+    // borderStyle: ["solid", "solid", "dashed", "dotted", "solid", "dashed", "dotted", "solid", "dashed", "dotted"],
+    // borderColor: ["primary", "accent", null, null, "highlight", null, null, "muted"],
     width: [`calc(100% - ${space[2]})`, null, null, null, `calc(100% - ${space[3]})`],
     maxWidth: "tabletS",
   },
@@ -315,7 +321,7 @@ const cards: ThemeCandor["cards"] = {
   primary: {
     borderWidth: "sm",
     borderStyle: "solid",
-    borderColor: "grayLight.2",
+    borderColor: "neutral.2",
     borderRadius: "default",
     padding: 1,
   },
@@ -333,6 +339,9 @@ const badges: ThemeCandor["badges"] = {
   accent: {
     backgroundColor: "accent",
   },
+  highlight: {
+    backgroundColor: "highlight",
+  },
 };
 
 const alerts: ThemeCandor["alerts"] = {
@@ -346,11 +355,11 @@ const alerts: ThemeCandor["alerts"] = {
   },
   accent: {
     backgroundColor: "accent",
-    color: "primary",
+    color: "white",
   },
   highlight: {
     backgroundColor: "highlight",
-    color: "secondary",
+    color: "white",
   },
 };
 

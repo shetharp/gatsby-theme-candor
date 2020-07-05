@@ -21,9 +21,11 @@ const Page: React.FC<PageTemplateProps> = ({ children }) => {
 
   return (
     <Layout>
-      <Badge marginRight={1}>{data.site.siteMetadata.title}</Badge>
       <Badge variant="secondary">
-        <Text variant="mono">Page.tsx</Text>
+        <Text variant="mono">Page template</Text>
+      </Badge>
+      <Badge variant="highlight" marginLeft={1}>
+        {data.site.siteMetadata.title}
       </Badge>
       {children}
     </Layout>

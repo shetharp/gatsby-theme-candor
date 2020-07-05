@@ -23,9 +23,11 @@ const Page: React.FC<PostProps> = (props) => {
 
   return (
     <Layout>
-      <Badge marginRight={1}>{data.site.siteMetadata.title}</Badge>
       <Badge variant="accent">
-        <Text variant="mono">Post.tsx</Text>
+        <Text variant="mono">Post template</Text>
+      </Badge>
+      <Badge variant="highlight" marginLeft={1}>
+        {data.site.siteMetadata.title}
       </Badge>
       <h1>{props.pageContext.frontmatter.title}</h1>
       <span>{props.pageContext.frontmatter.author}</span>
