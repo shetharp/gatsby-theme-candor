@@ -330,6 +330,9 @@ const badges: ThemePolaroid["badges"] = {
   secondary: {
     backgroundColor: "secondary",
   },
+  accent: {
+    backgroundColor: "accent",
+  },
 };
 
 const alerts: ThemePolaroid["alerts"] = {
