@@ -9,12 +9,12 @@
   "main": "index.ts",
   "license": "MIT",
   "peerDependencies": {
-    "gatsby": "^2.13.1",
+    "gatsby": "^2.23.20",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "gatsby": "^2.13.1",
+    "gatsby": "^2.23.20",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
