@@ -1,4 +1,4 @@
-# gatsby-theme-candor demo
+# gatsby-theme-candor
 
 Gatsby Theme Candor is a simple and honest theme that will help you set up a website with a blog in no time.
 
@@ -22,7 +22,7 @@ module.exports = {
 };
 ```
 
-3. Create `.mdx` files on your `src/pages` and `src/posts` folders and you are all set.
+3. Create `.mdx` files in your `src/pages` and `src/posts` folders.
 
 <!-- prettier-ignore-start -->
 ```mdx
@@ -56,5 +56,7 @@ This theme also supports the following out of the box:
 - Syntax highlighting in your MDX code blocks with [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
 - Responsive optimized images with [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/) and [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
 - Theming with [gatsby-plugin-theme-ui](https://www.gatsbyjs.org/packages/gatsby-plugin-theme-ui/)
+
+### Tutorial
 
 _Learn more about how this theme was developed: [TODO](#!)_
