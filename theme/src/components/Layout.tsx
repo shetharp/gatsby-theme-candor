@@ -18,6 +18,9 @@ export const Layout: React.FC<LayoutProps> = (props) => {
           body {
             margin: 0;
           }
+          a {
+            color: inherit;
+          }
         `}
       />
       <Header />

@@ -31,7 +31,7 @@ module.exports = {
 ---
 title: Hello World! This is a frontmatter title.
 author: Arlo Medi
-date: 01-July-2020
+date: 2020-07-30
 ---
 
 # Hello World!
