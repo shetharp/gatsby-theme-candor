@@ -9,7 +9,7 @@ export type PostProps = PageProps & {
   };
 };
 
-const Page: React.FC<PostProps> = (props) => {
+const Post: React.FC<PostProps> = (props) => {
   const { children } = props;
   const data = useStaticQuery(graphql`
     query {
@@ -35,4 +35,4 @@ const Page: React.FC<PostProps> = (props) => {
     </Layout>
   );
 };
-export default Page;
+export default Post;
