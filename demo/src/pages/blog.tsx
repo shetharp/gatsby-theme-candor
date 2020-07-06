@@ -9,7 +9,7 @@ type BlogIndexProps = PageProps & {
       nodes: {
         id: string;
         path: string;
-        context: {
+        context?: {
           frontmatter?: {
             author?: string;
             date?: string;
@@ -32,14 +32,16 @@ const BlogIndex: React.FC<BlogIndexProps> = (props) => {
       <Styled.h1>Blog Index</Styled.h1>
 
       <Styled.ul>
-        {pages.map(({ id, path, context: { frontmatter } }) => (
-          <Styled.li key={id}>
-            <Link to={path}>
-              <code>{path}</code>
-            </Link>
-            {frontmatter?.title && ` -- ${frontmatter.title}`}
-          </Styled.li>
-        ))}
+        {pages.map(({ id, path, context }) => {
+          return (
+            <Styled.li key={id}>
+              <Link to={path}>
+                <code>{path}</code>
+              </Link>
+              {context?.frontmatter?.title && ` -- ${context.frontmatter.title}`}
+            </Styled.li>
+          );
+        })}
       </Styled.ul>
     </Layout>
   );
