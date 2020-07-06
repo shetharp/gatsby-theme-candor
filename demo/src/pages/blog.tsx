@@ -44,6 +44,7 @@ const BlogIndex: React.FC<BlogIndexProps> = (props) => {
     </Layout>
   );
 };
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query AllPagesQuery {
@@ -64,5 +65,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default BlogIndex;
