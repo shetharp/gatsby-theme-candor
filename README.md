@@ -4,61 +4,67 @@
   </a>
 </p>
 <h1 align="center">
-  Starter for creating a Gatsby Theme workspace
+  Workspace starter for gatsby-theme-candor
 </h1>
 
+To start developing your own theme using this repo as a starting point:
+
 ```shell
-gatsby new my-theme https://github.com/gatsbyjs/gatsby-starter-theme-workspace
+gatsby new my-theme https://github.com/shetharp/gatsby-theme-candor
 cd my-theme
-yarn workspace example develop
+yarn
+yarn workspace demo develop
 ```
 
-## Layout
+To create a Gatsby site with the theme itself as a starting point:
 
-```text
-.
-├── README.md
-├── gatsby-theme-minimal
-│   ├── README.md
-│   ├── gatsby-config.js
-│   ├── index.js
-│   └── package.json
-├── example
-│   ├── README.md
-│   ├── gatsby-config.js
-│   ├── package.json
-│   └── src
-├── package.json
-└── yarn.lock
+- Follow the installation instructions for [gatsby-theme-candor](https://www.npmjs.com/package/@shetharp/gatsby-theme-candor)
 
-3 directories, 10 files
-```
+## Features
 
-### `gatsby-theme-minimal`
+This theme workspace comes pre-loaded with the following:
 
-This directory is the theme package itself. You should rename this at
-some point to be `gatsby-theme-{my-theme-name}`. Also change the
+Configurations for Typescript, ESLint, and Husky
+
+- `yarn lint` to manually run ESLint
+- `yarn lint:fix` to manually run ESLint and auto-fix most issues
+- `yarn type-check` to run the Typescript compiler
+- **Note:** Husky will run `yarn lint:fix` on staged files during pre-commit, and it will run `yarn type-check` on all files during pre-push
+
+**`theme`** workspace
+
+- Sources pages and posts from two seprate directories
+- MDX support with frontmatter querying and referencing
+- Syntax highlighting for code blocks in MDX
+- Responsive optimized images
+- A custom theme built with `gatsby-plugin-theme-ui`
+- Documented code and type-checking with Typescript
+
+**`demo`** workspace
+
+- Consumes the theme and builds a site with example content
+- Has a [Blog Index](http://localhost:8000/blog) page to view a list of all the pages in the demo site
+- Has a [Theme Preview](http://localhost:8000/theme-preview) page to view the theme in action
+- Has a [Theme JSON](http://localhost:8000/theme-json) page to view the raw theme JSON
+- Ample examples of component Shadowing in Gatsby
+
+### `theme`
+
+This directory is the theme package itself. You should change the
 `package.json` name field and the corresponding dependency in the
 example directory's `package.json`/`gatsby-config.js` to match the chosen name.
 
-- `gatsby-theme-minimal/`
-  - `gatsby-config.js`: An empty gatsby-config that you can use as a starting point for building functionality into your theme.
-  - `index.js`: Since themes also function as plugins, this is an empty file that
-    gatsby needs to use this theme as a plugin.
-  - `package.json`: The dependencies that your theme will pull in when people install it. `gatsby` should be a `peerDependency`.
+### `demo`
 
-### `example`
-
-This is an example usage of your theme. It should look the same as the
+This is an demo usage of your theme. It should look the same as the
 site of someone who installed and used your theme from npm.
-
-- `example/`
-  - `gatsby-config.js`: Specifies which theme to use and any other one-off config a site might need.
-  - `src/`: Source code such as one-off pages or components that might live in
-    a user's site.
 
 You can run the example with:
 
 ```shell
-yarn workspace example develop
+yarn workspace demo develop
 ```
+
+## Tutorial
+
+_Learn more about how this theme was developed: [TODO](#!)_
