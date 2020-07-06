@@ -1,6 +1,11 @@
 # gatsby-theme-candor
 
-Gatsby Theme Candor is a simple and honest theme that will help you set up a website with a blog in no time.
+Gatsby Theme Candor is a simple and honest theme that will help you set up a production-grade website in no time.
+
+Out of the box, it provides support for Typescript, MDX, and a custom theme built using the `theme-ui` spec.
+It also comes pre-configured to support a blog, frontmatter, syntax highlighting in code blocks, and responsive images.
+
+### 🐨 View [Demo Site →](https://shetharp.github.io/gatsby-theme-candor/)
 
 ## Installation
 
@@ -56,6 +61,7 @@ This theme also supports the following out of the box:
 - Syntax highlighting in your MDX code blocks with [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
 - Responsive optimized images with [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/) and [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
 - Theming with [gatsby-plugin-theme-ui](https://www.gatsbyjs.org/packages/gatsby-plugin-theme-ui/)
+- Type-checking with Typescript
 
 ## Tutorial
 

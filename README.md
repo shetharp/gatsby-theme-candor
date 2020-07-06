@@ -20,6 +20,8 @@ To create a Gatsby site with the theme itself as a starting point:
 
 - Follow the installation instructions for [gatsby-theme-candor](https://www.npmjs.com/package/@shetharp/gatsby-theme-candor)
 
+### 🐨 View [Demo Site →](https://shetharp.github.io/gatsby-theme-candor/)
+
 ## Features
 
 This theme workspace comes pre-loaded with the following:
