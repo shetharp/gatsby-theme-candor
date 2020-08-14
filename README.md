@@ -69,4 +69,6 @@ yarn workspace demo develop
 
 ## Tutorial
 
-_Learn more about how this theme was developed: [TODO](#!)_
+I wrote up a developer guide on how I built this theme. Give it a read if you want to build your own Gatsby theme or build on top of this one.
+
+[Creating New Gatsby Theme with Typescript, MDX, and Theme-UI](https://hackernoon.com/creating-new-gatsby-theme-with-typescript-mdx-and-theme-ui-tz1c3u3u)
